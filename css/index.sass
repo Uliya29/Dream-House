@@ -1,3 +1,153 @@
 $color-accent: #FFAC30
 
+@keyframes reduce-radius-ls
+  from
+    r: 30px
+  50%
+    r: 25px
+  to
+    r: 30px
+
+@keyframes reduce-radius-lm
+  from
+    r: 40px
+  50%
+    r: 35px
+  to
+    r: 40px
+
+@keyframes rotation-svg
+  from
+    transform: none
+  25%
+    transform: rotate(10deg)
+  50%
+    transform: none
+  75%
+    transform: rotate(-10deg)
+  to
+    transform: none
+
+*,
+*::after,
+*::before
+  box-sizing: border-box
+
+body
+  background: gray
+
+button
+  padding: 0
+  background: none
+  border: none
+
+a
+  text-decoration: none
+
+.title-container
+  display: flex
+  justify-content: flex-start
+  width: 400px
+  height: 400px
+
+.title    
+  transform: rotate(-90deg)
+  width: 400px
+  font: 
+    family: 'Roboto'
+    weight: 500
+    size: 12px
+  text-transform: uppercase
+  letter-spacing: 0.7em
+
+.header
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  &__container
+    width: 100%
+    max-width: 1880px
+    height: 100%
+    flex-flow: 1
+    margin: 0 auto
+    padding: 0 30px
+
+  &__top
+    display: flex
+    width: 100%
+    align-items: center
+
+  &__top-container
+    display: flex
+    align-items: center
+    max-width: 1564px
+    width: 100%
+    min-height: 119px
+    margin-left: 63px
+    padding-right: 32px
+    margin-right: 113px
+    border-bottom: solid 1px rgba(255, 255, 255, 0.25)
   
+  &__phone
+    color: white
+    font: 
+      family: 'Roboto'
+      size: 16px
+      weight: 500
+    line-height: 100%
+    margin-left: 127px
+    letter-spacing: 0.1em
+
+  &__order-call
+    display: flex
+    align-items: center
+    margin-left: auto
+    color: $color-accent
+    font:
+      family: 'Open Sans'
+      size: 16px
+      weight: 600
+    line-height: 100%
+    text-transform: uppercase  
+    letter-spacing: 0.1em
+
+  &__order-call:hover .circle-ls
+    animation: reduce-radius-ls 1s infinite
+  &__order-call:hover .circle-lm
+    animation: reduce-radius-lm 1s infinite
+  &__order-call:hover .phone-svg 
+    animation: rotation-svg 1s infinite
+
+
+  &__phone-img
+    width: 80px
+    height: 80px
+    margin-left: 47px
+
+  &__left
+    display: flex
+    flex-direction: column
+    // max-width: 50px
+    height: 100%
+    max-height: 966px
+    // justify-content: space-between
+    align-items: flex-start
+  &__left-decor
+    width: 1px
+    max-height: 120px
+    height: 100%
+    background-color: rgba(255, 255, 255, 0.25)
+    margin-bottom: 80px
+    margin-top: auto
+
+.social
+  &__list
+    list-style: none
+    display: flex
+    flex-direction: column
+    gap: 40px
+    margin: 0
+    padding: 0
+
