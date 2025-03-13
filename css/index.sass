@@ -34,31 +34,37 @@ $color-accent: #FFAC30
   box-sizing: border-box
 
 body
+  overflow: hidden
   background: gray
 
 button
   padding: 0
   background: none
   border: none
+  cursor: pointer
 
 a
   text-decoration: none
 
-.title-container
-  display: flex
-  justify-content: flex-start
-  width: 400px
-  height: 400px
+.container
+  width: 100%
+  max-width: 1880px
+  height: 100%
+  margin: 0 auto
+  padding: 0 25px
 
-.title    
-  transform: rotate(-90deg)
-  width: 400px
+.title 
+  transform: rotate(180deg)
+  writing-mode: vertical-lr
+  max-width: 100%
   font: 
     family: 'Roboto'
     weight: 500
     size: 12px
   text-transform: uppercase
   letter-spacing: 0.7em
+  color: rgba(255, 255, 255, 0.5)
+  margin: 0
 
 .header
   position: fixed
@@ -66,18 +72,14 @@ a
   right: 0
   bottom: 0
   left: 0
-  &__container
-    width: 100%
-    max-width: 1880px
-    height: 100%
-    flex-flow: 1
-    margin: 0 auto
-    padding: 0 30px
+  z-index: 100
 
   &__top
     display: flex
     width: 100%
     align-items: center
+    min-height: 119px
+
 
   &__top-container
     display: flex
@@ -126,21 +128,29 @@ a
     height: 80px
     margin-left: 47px
 
-  &__left
+.left-panel
+  width: 50px
+  height: calc(100% - 119px)
+  display: flex
+  align-items: center
+
+  &__container
     display: flex
     flex-direction: column
-    // max-width: 50px
+    width: 100%
     height: 100%
-    max-height: 966px
-    // justify-content: space-between
-    align-items: flex-start
-  &__left-decor
+    max-height: 847px
+    justify-content: space-between
+    align-items: center
+    padding: 25px
+
+
+  &__decor
     width: 1px
     max-height: 120px
     height: 100%
     background-color: rgba(255, 255, 255, 0.25)
-    margin-bottom: 80px
-    margin-top: auto
+    
 
 .social
   &__list
@@ -151,3 +161,20 @@ a
     margin: 0
     padding: 0
 
+@media (max-height: 978px)
+  .left-panel
+    &__container
+      justify-content: center
+    &__decor
+      display: none
+  .social
+    margin-top: 80px
+
+@media (max-height: 832px)
+  .social
+    &__list
+      gap: 20px
+  
+@media (max-height: 768px)
+  .social
+    display: none 
