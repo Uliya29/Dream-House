@@ -1,0 +1,27 @@
+.order-call
+  display: flex
+  align-items: center
+  color: $color-accent
+  font:
+    family: 'Open Sans'
+    size: 16px
+    weight: 600
+  line-height: 100%
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  transition: all 0.3s
+  &:hover
+    font-size: 18px
+  &:hover .circle-ls
+    animation: reduce-radius-ls 1s infinite
+  &:hover .circle-lm
+    animation: reduce-radius-lm 1s infinite
+  &:hover .phone-svg
+    animation: rotation-svg 1s infinite
+    
+
+  &__img
+    width: 80px
+    height: 80px
+    margin-left: 47px
+
