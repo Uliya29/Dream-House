@@ -34,4 +34,50 @@
 
   &__logo
     display: none
+  &__menu-btn
+    width: 30px
+    height: 16px
 
+@media (max-height: 590px)
+  .header
+    &__logo
+      display: block
+      margin: 0 63px 0 40px
+ 
+@media (max-width: 1200px)
+  .header
+    &__phone
+      margin-left: 47px
+
+@media (max-width: 1066px)
+  .header
+    &__phone
+      display: none
+
+@media (max-width: 912px)
+  .header
+    border-bottom: solid 1px rgba(255, 255, 255, 0.25)
+
+    &__container
+      border: none
+      width: 100%
+      height: 99px
+    &__order-call
+      margin-right: 0
+    &__logo
+      display: block
+      margin: 0 63px 0 0
+
+
+@media (max-width: 768px)
+  .header
+    &__logo
+      margin: 0 45px 0 0
+
+@media (max-width: 480px)
+  .header
+    &__logo
+      margin-right: 27px
+      width: 40px
+    &__container
+      height: 79px

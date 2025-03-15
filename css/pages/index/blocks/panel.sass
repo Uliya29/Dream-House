@@ -19,3 +19,50 @@
     top: 34px
     left: 65px
     z-index: 100
+
+
+// HEIGHT
+@media (max-height: 978px)
+  .panel
+    &__container
+      justify-content: center
+    &__decor
+      display: none
+
+@media (max-height: 810px)
+  .panel
+    justify-content: start
+    &__title
+      margin-top: 80px
+
+// WIDTH
+@media (max-width: 912px)
+  .panel
+    left: 25px
+    &__logo
+      display: none
+@media (max-width: 768px), (max-height: 590px)
+  .panel
+    width: 100%
+    height: 21px
+    margin: 0
+    top: 133px
+    left: 0
+    &__logo
+      display: none
+    &__container
+      justify-content: center
+    &__decor
+      display: none
+    &__title
+      transform: none
+      writing-mode: horizontal-tb
+      max-width: 100%
+      margin: 0 25px
+      text-align: center
+    &--left
+      padding: 0
+
+@media (max-width: 480px)
+  .panel
+      top: 106px
